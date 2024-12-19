@@ -51,26 +51,6 @@ The total time complexity for performing the Find and Union operations for each 
 Overall Time Complexity:
 
 Combining the time for sorting the edges and performing the union-find operations, the overall time complexity is:
-𝑂
-(
-𝐸
-log
-⁡
-𝐸
-+
-𝐸
-𝛼
-(
-𝑉
-)
-)
-≈
-𝑂
-(
-𝐸
-log
-⁡
-𝐸
-)
-O(ElogE+Eα(V))≈O(ElogE)
+𝑂(𝐸log𝐸+𝐸𝛼(𝑉))≈𝑂(𝐸log𝐸)
+
 This is because α(V) grows extremely slowly, and for large graphs, O(E log E) will dominate.
