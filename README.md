@@ -38,6 +38,8 @@ Kruskal(G):
             i. Add edge (u, v) to MST.
             ii. Perform Union(u, v) to merge the sets containing u and v.
     5. Return the MST and its total weight.
+```
+
 b. Detailed Analysis of the Algorithm
 Time Complexity Analysis
 Sorting the Edges:
