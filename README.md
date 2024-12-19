@@ -40,19 +40,26 @@ Kruskal(G):
     5. Return the MST and its total weight.
 ```
 
-b. Detailed Analysis of the Algorithm
-Time Complexity Analysis
-Sorting the Edges:
+## b. Detailed Analysis of the Algorithm
 
-The first step is sorting all edges in non-decreasing order of their weight. Sorting a list of E edges takes O(E log E) time, where E is the number of edges in the graph.
-Union-Find Operations:
+### Time Complexity Analysis
 
-Find Operation: This operation determines the root of a vertex and uses path compression to make future queries faster. The Find operation runs in O(α(V)) time, where α(V) is the inverse Ackermann function. The function grows very slowly, so it is nearly constant for practical purposes.
-Union Operation: The Union operation merges two sets into one, using union by rank to maintain a balanced tree structure. This operation also runs in O(α(V)) time.
-The total time complexity for performing the Find and Union operations for each edge is O(E α(V)), where E is the number of edges, and V is the number of vertices in the graph.
-Overall Time Complexity:
+#### Sorting the Edges:
+The first step is sorting all edges in non-decreasing order of their weight. Sorting a list of **E** edges takes **O(E log E)** time, where **E** is the number of edges in the graph.
 
+#### Union-Find Operations:
+
+- **Find Operation**: This operation determines the root of a vertex and uses path compression to make future queries faster. The **Find** operation runs in **O(α(V))** time, where **α(V)** is the inverse Ackermann function. The function grows very slowly, so it is nearly constant for practical purposes.
+  
+- **Union Operation**: The **Union** operation merges two sets into one, using union by rank to maintain a balanced tree structure. This operation also runs in **O(α(V))** time.
+
+The total time complexity for performing the **Find** and **Union** operations for each edge is **O(E α(V))**, where **E** is the number of edges, and **V** is the number of vertices in the graph.
+
+### Overall Time Complexity:
 Combining the time for sorting the edges and performing the union-find operations, the overall time complexity is:
-𝑂(𝐸log𝐸+𝐸𝛼(𝑉))≈𝑂(𝐸log𝐸)
 
-This is because α(V) grows extremely slowly, and for large graphs, O(E log E) will dominate.
+\[
+O(E \log E + E \alpha(V)) \approx O(E \log E)
+\]
+
+This is because **α(V)** grows extremely slowly, and for large graphs, **O(E log E)** will dominate.
